@@ -25,3 +25,7 @@ b6 = Bicicleta("roxa","monark",2020,1600)
 b7 = Bicicleta("laranja","caloi",2017,1000)
 b8 = Bicicleta("rosa","monark",2021,2200)
 b9 = Bicicleta("cinza","caloi",2019,1700)
+
+print(b1)
+print(b2)
+print(b3)
