@@ -7,12 +7,13 @@ class animal:
         return f"{self.__class__.__name__}: {', '.join([f'{chave}={valor}' for chave, valor in self.__dict__.items()])}"
     
 class mamifero(animal):
-    def __init__(self, nome, cor):
-        super().__init__(nome, cor)
+    def __init__(self, **kw):
+        super().__init__(**kw)
 
 class ave(animal):
-    def __init__(self, nome, cor):
-        super().__init__(nome, cor)
+    def __init__(self, voa, **kw):
+        self.voa = voa
+        super().__init__(**kw)
 
     def botarOvo(self):
         print(f"o(a) " + self.nome + " botou um ovo!")
@@ -31,9 +32,9 @@ class gato(mamifero):
 
 
 
-cachorro1 = cachorro("Rex", "marrom")
-gato1 = gato("Mia", "preto")
-coruja1 = coruja("harry", "branca")
+cachorro1 = cachorro(nome = "Rex", cor = "marrom")
+gato1 = gato(nome = "Mia", cor = "preto")
+coruja1 = coruja(nome = "harry", cor = "branca", voa = True)
 
 print(cachorro1)
 print(gato1)
